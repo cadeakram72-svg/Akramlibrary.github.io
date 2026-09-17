@@ -1,0 +1,19 @@
+{
+  "id": "my-book",
+  "title": "Magaca buugga",
+  "author": "Magaca qoraaga",
+  "translator": "",
+  "category": "Education",
+  "language": "Somali",
+  "description": "Sharaxaad gaaban oo buugga ku saabsan.",
+  "price": 0,
+  "paid": false,
+  "download": true,
+  "pdf": "assets/books/my-book.pdf",
+  "text": "assets/books/my-book.pdf",
+  "cover": "assets/books/my-book.jpg",
+  "source": "assets/books/my-book.pdf",
+  "license": "Geli xogta saxda ah ee xuquuqda buugga.",
+  "pageCount": 1,
+  "status": "published"
+}
