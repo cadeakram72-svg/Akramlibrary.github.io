@@ -10,10 +10,10 @@
     "price": 0,
     "paid": false,
     "download": true,
-    "pdf": "assets/books/dhis-naftaada.pdf",
-    "text": "assets/books/dhis-naftaada.pdf",
-    "cover": "assets/books/dhis-naftaada.jpg",
-    "source": "assets/books/dhis-naftaada.pdf",
+    "pdf": "assets--books--dhis-naftaada.pdf",
+    "text": "assets--books--dhis-naftaada.pdf",
+    "cover": "assets--books--dhis-naftaada.jpg",
+    "source": "assets--books--dhis-naftaada.pdf",
     "license": "Xuquuqda qoraaga iyo turjumaha way dhawrsan tahay. / Copyright remains with the author and translator.",
     "pageCount": 56,
     "status": "published"
@@ -29,10 +29,10 @@
     "price": 0,
     "paid": false,
     "download": true,
-    "pdf": "assets/books/ganacsade.pdf",
-    "text": "assets/books/ganacsade.pdf",
-    "cover": "assets/books/ganacsade.jpg",
-    "source": "assets/books/ganacsade.pdf",
+    "pdf": "assets--books--ganacsade.pdf",
+    "text": "assets--books--ganacsade.pdf",
+    "cover": "assets--books--ganacsade.jpg",
+    "source": "assets--books--ganacsade.pdf",
     "license": "Xuquuqda qoraaga iyo turjumaha way dhawrsan tahay. / Copyright remains with the author and translator.",
     "pageCount": 28,
     "status": "published"
@@ -48,10 +48,10 @@
     "price": 0,
     "paid": false,
     "download": true,
-    "pdf": "assets/books/xuska-mawliidka.pdf",
-    "text": "assets/books/xuska-mawliidka.pdf",
-    "cover": "assets/books/xuska-mawliidka.jpg",
-    "source": "assets/books/xuska-mawliidka.pdf",
+    "pdf": "assets--books--xuska-mawliidka.pdf",
+    "text": "assets--books--xuska-mawliidka.pdf",
+    "cover": "assets--books--xuska-mawliidka.jpg",
+    "source": "assets--books--xuska-mawliidka.pdf",
     "license": "Xuquuqda qoraaga iyo turjumaha way dhawrsan tahay. / Copyright remains with the author and translator.",
     "pageCount": 26,
     "status": "published"
@@ -67,10 +67,10 @@
     "price": 0,
     "paid": false,
     "download": true,
-    "pdf": "assets/books/maxaynu-u-dhibaataysannahay.pdf",
-    "text": "assets/books/maxaynu-u-dhibaataysannahay.pdf",
-    "cover": "assets/books/maxaynu-u-dhibaataysannahay.jpg",
-    "source": "assets/books/maxaynu-u-dhibaataysannahay.pdf",
+    "pdf": "assets--books--maxaynu-u-dhibaataysannahay.pdf",
+    "text": "assets--books--maxaynu-u-dhibaataysannahay.pdf",
+    "cover": "assets--books--maxaynu-u-dhibaataysannahay.jpg",
+    "source": "assets--books--maxaynu-u-dhibaataysannahay.pdf",
     "license": "Xuquuqda qoraaga iyo turjumaha way dhawrsan tahay. / Copyright remains with the author and translator.",
     "pageCount": 58,
     "status": "published"
@@ -86,8 +86,8 @@
     "source": "https://www.gutenberg.org/ebooks/1342",
     "license": "Public domain in the USA · Project Gutenberg. Check the law where you live.",
     "download": true,
-    "text": "assets/1342.txt",
-    "cover": "assets/1342.jpg"
+    "text": "assets--1342.txt",
+    "cover": "assets--1342.jpg"
   },
   {
     "id": "11",
@@ -100,8 +100,8 @@
     "source": "https://www.gutenberg.org/ebooks/11",
     "license": "Public domain in the USA · Project Gutenberg. Check the law where you live.",
     "download": true,
-    "text": "assets/11.txt",
-    "cover": "assets/11.jpg"
+    "text": "assets--11.txt",
+    "cover": "assets--11.jpg"
   },
   {
     "id": "1661",
@@ -114,8 +114,8 @@
     "source": "https://www.gutenberg.org/ebooks/1661",
     "license": "Public domain in the USA · Project Gutenberg. Check the law where you live.",
     "download": true,
-    "text": "assets/1661.txt",
-    "cover": "assets/1661.jpg"
+    "text": "assets--1661.txt",
+    "cover": "assets--1661.jpg"
   },
   {
     "id": "64317",
@@ -128,8 +128,8 @@
     "source": "https://www.gutenberg.org/ebooks/64317",
     "license": "Public domain in the USA · Project Gutenberg. Check the law where you live.",
     "download": true,
-    "text": "assets/64317.txt",
-    "cover": "assets/64317.jpg"
+    "text": "assets--64317.txt",
+    "cover": "assets--64317.jpg"
   },
   {
     "id": "2600",
@@ -142,8 +142,8 @@
     "source": "https://www.gutenberg.org/ebooks/2600",
     "license": "Public domain in the USA · Project Gutenberg. Check the law where you live.",
     "download": true,
-    "text": "assets/2600.txt",
-    "cover": "assets/2600.jpg"
+    "text": "assets--2600.txt",
+    "cover": "assets--2600.jpg"
   },
   {
     "id": "84",
@@ -156,8 +156,8 @@
     "source": "https://www.gutenberg.org/ebooks/84",
     "license": "Public domain in the USA · Project Gutenberg. Check the law where you live.",
     "download": true,
-    "text": "assets/84.txt",
-    "cover": "assets/84.jpg"
+    "text": "assets--84.txt",
+    "cover": "assets--84.jpg"
   },
   {
     "id": "7370",
@@ -170,8 +170,8 @@
     "source": "https://www.gutenberg.org/ebooks/7370",
     "license": "Public domain in the USA · Project Gutenberg. Check the law where you live.",
     "download": true,
-    "text": "assets/7370.txt",
-    "cover": "assets/7370.jpg"
+    "text": "assets--7370.txt",
+    "cover": "assets--7370.jpg"
   },
   {
     "id": "2680",
@@ -184,8 +184,8 @@
     "source": "https://www.gutenberg.org/ebooks/2680",
     "license": "Public domain in the USA · Project Gutenberg. Check the law where you live.",
     "download": true,
-    "text": "assets/2680.txt",
-    "cover": "assets/2680.jpg"
+    "text": "assets--2680.txt",
+    "cover": "assets--2680.jpg"
   },
   {
     "id": "4507",
@@ -198,8 +198,8 @@
     "source": "https://www.gutenberg.org/ebooks/4507",
     "license": "Public domain in the USA · Project Gutenberg. Check the law where you live.",
     "download": true,
-    "text": "assets/4507.txt",
-    "cover": "assets/4507.jpg"
+    "text": "assets--4507.txt",
+    "cover": "assets--4507.jpg"
   },
   {
     "id": "2701",
@@ -212,8 +212,8 @@
     "source": "https://www.gutenberg.org/ebooks/2701",
     "license": "Public domain in the USA · Project Gutenberg. Check the law where you live.",
     "download": true,
-    "text": "assets/2701.txt",
-    "cover": "assets/2701.jpg"
+    "text": "assets--2701.txt",
+    "cover": "assets--2701.jpg"
   },
   {
     "id": "36",
@@ -226,8 +226,8 @@
     "source": "https://www.gutenberg.org/ebooks/36",
     "license": "Public domain in the USA · Project Gutenberg. Check the law where you live.",
     "download": true,
-    "text": "assets/36.txt",
-    "cover": "assets/36.jpg"
+    "text": "assets--36.txt",
+    "cover": "assets--36.jpg"
   },
   {
     "id": "3300",
@@ -240,8 +240,8 @@
     "source": "https://www.gutenberg.org/ebooks/3300",
     "license": "Public domain in the USA · Project Gutenberg. Check the law where you live.",
     "download": true,
-    "text": "assets/3300.txt",
-    "cover": "assets/3300.jpg"
+    "text": "assets--3300.txt",
+    "cover": "assets--3300.jpg"
   },
   {
     "id": "20203",
@@ -254,8 +254,8 @@
     "source": "https://www.gutenberg.org/ebooks/20203",
     "license": "Public domain in the USA · Project Gutenberg. Check the law where you live.",
     "download": true,
-    "text": "assets/20203.txt",
-    "cover": "assets/20203.jpg"
+    "text": "assets--20203.txt",
+    "cover": "assets--20203.jpg"
   },
   {
     "id": "1228",
@@ -268,8 +268,8 @@
     "source": "https://www.gutenberg.org/ebooks/1228",
     "license": "Public domain in the USA · Project Gutenberg. Check the law where you live.",
     "download": true,
-    "text": "assets/1228.txt",
-    "cover": "assets/1228.jpg"
+    "text": "assets--1228.txt",
+    "cover": "assets--1228.jpg"
   },
   {
     "id": "1497",
@@ -282,8 +282,8 @@
     "source": "https://www.gutenberg.org/ebooks/1497",
     "license": "Public domain in the USA · Project Gutenberg. Check the law where you live.",
     "download": true,
-    "text": "assets/1497.txt",
-    "cover": "assets/1497.jpg"
+    "text": "assets--1497.txt",
+    "cover": "assets--1497.jpg"
   },
   {
     "id": "15489",
@@ -296,8 +296,8 @@
     "source": "https://www.gutenberg.org/ebooks/15489",
     "license": "Public domain in the USA · Project Gutenberg. Check the law where you live.",
     "download": true,
-    "text": "assets/15489.txt",
-    "cover": "assets/15489.jpg"
+    "text": "assets--15489.txt",
+    "cover": "assets--15489.jpg"
   },
   {
     "id": "132",
@@ -310,8 +310,8 @@
     "source": "https://www.gutenberg.org/ebooks/132",
     "license": "Public domain in the USA · Project Gutenberg. Check the law where you live.",
     "download": true,
-    "text": "assets/132.txt",
-    "cover": "assets/132.jpg"
+    "text": "assets--132.txt",
+    "cover": "assets--132.jpg"
   },
   {
     "id": "23",
@@ -324,8 +324,8 @@
     "source": "https://www.gutenberg.org/ebooks/23",
     "license": "Public domain in the USA · Project Gutenberg. Check the law where you live.",
     "download": true,
-    "text": "assets/23.txt",
-    "cover": "assets/23.jpg"
+    "text": "assets--23.txt",
+    "cover": "assets--23.jpg"
   },
   {
     "id": "so-0001",
@@ -337,8 +337,8 @@
     "source": "https://storybookscanada.ca/stories/so/0001/",
     "license": "https://creativecommons.org/licenses/by/3.0/ · Written by: Cornelius Gulere · Illustrated by: Catherine Groenewald · Translated by: Abdi Muse · Read by: Ibrahim Ahmed · Language: Somali · Level: Level 2 · Source: A very tall man from African Storybook · Source: https://storybookscanada.ca/stories/so/0001/\nLicense: https://creativecommons.org/licenses/by/3.0/\nText unchanged; reformatted for the Akram reader.",
     "download": true,
-    "text": "assets/so-0001.txt",
-    "cover": "assets/so-0001.jpg",
+    "text": "assets--so-0001.txt",
+    "cover": "assets--so-0001.jpg",
     "short": true
   },
   {
@@ -351,8 +351,8 @@
     "source": "https://storybookscanada.ca/stories/so/0004/",
     "license": "https://creativecommons.org/licenses/by/3.0/ · Written by: Fabian Wakholi · Illustrated by: Marleen Visser, Ingrid Schechter · Translated by: Abdi Muse · Read by: Ibrahim Ahmed · Language: Somali · Level: Level 2 · Source: Goat, Dog and Cow from African Storybook · Source: https://storybookscanada.ca/stories/so/0004/\nLicense: https://creativecommons.org/licenses/by/3.0/\nText unchanged; reformatted for the Akram reader.",
     "download": true,
-    "text": "assets/so-0004.txt",
-    "cover": "assets/so-0004.jpg",
+    "text": "assets--so-0004.txt",
+    "cover": "assets--so-0004.jpg",
     "short": true
   },
   {
@@ -365,8 +365,8 @@
     "source": "https://storybookscanada.ca/stories/so/0095/",
     "license": "https://creativecommons.org/licenses/by/3.0/ · Written by: Michael Oguttu · Illustrated by: Vusi Malindi · Translated by: Abdi Muse · Read by: Ibrahim Ahmed · Language: Somali · Level: Level 2 · Source: Zama is great! from African Storybook · Source: https://storybookscanada.ca/stories/so/0095/\nLicense: https://creativecommons.org/licenses/by/3.0/\nText unchanged; reformatted for the Akram reader.",
     "download": true,
-    "text": "assets/so-0095.txt",
-    "cover": "assets/so-0095.jpg",
+    "text": "assets--so-0095.txt",
+    "cover": "assets--so-0095.jpg",
     "short": true
   },
   {
@@ -379,8 +379,8 @@
     "source": "https://storybookscanada.ca/stories/so/0296/",
     "license": "https://creativecommons.org/licenses/by/4.0/ · Written by: Humphreys Odunga · Illustrated by: Zablon Alex Nguku · Translated by: Anwar Mohamed Dirie · Read by: Ibrahim Ahmed · Language: Somali · Level: Level 2 · Source: Tom the banana seller from African Storybook · Source: https://storybookscanada.ca/stories/so/0296/\nLicense: https://creativecommons.org/licenses/by/4.0/\nText unchanged; reformatted for the Akram reader.",
     "download": true,
-    "text": "assets/so-0296.txt",
-    "cover": "assets/so-0296.jpg",
+    "text": "assets--so-0296.txt",
+    "cover": "assets--so-0296.jpg",
     "short": true
   },
   {
@@ -393,8 +393,8 @@
     "source": "https://storybookscanada.ca/stories/ar/0001/",
     "license": "https://creativecommons.org/licenses/by/3.0/ · Written by: Cornelius Gulere · Illustrated by: Catherine Groenewald · Translated by: Hanadi Traifeh, Maaouia Haj Mabrouk · Read by: Mashael Muhanna · Language: Arabic · Level: Level 2 · Source: A very tall man from African Storybook · Source: https://storybookscanada.ca/stories/ar/0001/\nLicense: https://creativecommons.org/licenses/by/3.0/\nText unchanged; reformatted for the Akram reader.",
     "download": true,
-    "text": "assets/ar-0001.txt",
-    "cover": "assets/ar-0001.jpg",
+    "text": "assets--ar-0001.txt",
+    "cover": "assets--ar-0001.jpg",
     "short": true
   },
   {
@@ -407,8 +407,8 @@
     "source": "https://storybookscanada.ca/stories/ar/0004/",
     "license": "https://creativecommons.org/licenses/by/3.0/ · Written by: Fabian Wakholi · Illustrated by: Marleen Visser, Ingrid Schechter · Translated by: Heba Tesheh, Maaouia Haj Mabrouk · Read by: Mashael Muhanna · Language: Arabic · Level: Level 2 · Source: Goat, Dog and Cow from African Storybook · Source: https://storybookscanada.ca/stories/ar/0004/\nLicense: https://creativecommons.org/licenses/by/3.0/\nText unchanged; reformatted for the Akram reader.",
     "download": true,
-    "text": "assets/ar-0004.txt",
-    "cover": "assets/ar-0004.jpg",
+    "text": "assets--ar-0004.txt",
+    "cover": "assets--ar-0004.jpg",
     "short": true
   },
   {
@@ -421,8 +421,8 @@
     "source": "https://storybookscanada.ca/stories/ar/0095/",
     "license": "https://creativecommons.org/licenses/by/3.0/ · Written by: Michael Oguttu · Illustrated by: Vusi Malindi · Translated by: Heba Tesheh, Maaouia Haj Mabrouk · Read by: Mashael Muhanna · Language: Arabic · Level: Level 2 · Source: Zama is great! from African Storybook · Source: https://storybookscanada.ca/stories/ar/0095/\nLicense: https://creativecommons.org/licenses/by/3.0/\nText unchanged; reformatted for the Akram reader.",
     "download": true,
-    "text": "assets/ar-0095.txt",
-    "cover": "assets/ar-0095.jpg",
+    "text": "assets--ar-0095.txt",
+    "cover": "assets--ar-0095.jpg",
     "short": true
   },
   {
@@ -435,8 +435,8 @@
     "source": "https://storybookscanada.ca/stories/ar/0296/",
     "license": "https://creativecommons.org/licenses/by/4.0/ · Written by: Humphreys Odunga · Illustrated by: Zablon Alex Nguku · Translated by: Maaouia Haj Mabrouk · Read by: Mashael Muhanna · Language: Arabic · Level: Level 2 · Source: Tom the banana seller from African Storybook · Source: https://storybookscanada.ca/stories/ar/0296/\nLicense: https://creativecommons.org/licenses/by/4.0/\nText unchanged; reformatted for the Akram reader.",
     "download": true,
-    "text": "assets/ar-0296.txt",
-    "cover": "assets/ar-0296.jpg",
+    "text": "assets--ar-0296.txt",
+    "cover": "assets--ar-0296.jpg",
     "short": true
   },
   {
@@ -450,7 +450,7 @@
     "source": "https://www.gutenberg.org/ebooks/2388",
     "license": "Public domain in the USA · Project Gutenberg. Check the law where you live.",
     "download": true,
-    "text": "assets/2388.txt",
-    "cover": "assets/2388.jpg"
+    "text": "assets--2388.txt",
+    "cover": "assets--2388.jpg"
   }
 ]

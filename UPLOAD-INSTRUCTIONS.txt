@@ -1,0 +1,13 @@
+AKRAM LIBRARY — UPDATED PACKAGE
+
+1. Extract this ZIP. Open akram-upload-ready.
+2. Select ALL files inside it (not the enclosing folder).
+3. GitHub repository: Add file > Upload files. Drop ALL selected files.
+4. Commit changes. Existing matching files are replaced.
+5. Wait for Pages deployment, then refresh with Ctrl+Shift+R.
+
+All assets now sit beside index.html. No assets subfolder is required.
+Do not delete the old folder first. The new pages use new asset filenames.
+
+Somali: Faylasha oo dhan isku mar geli. index.html iyo faylasha assets-- waa inay hal meel wada yaallaan.
+Google login/admin/payment processing are not provided by this static edition.
