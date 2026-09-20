@@ -1,13 +1,10 @@
-AKRAM LIBRARY — UPDATED PACKAGE
+AKRAM LIBRARY — UPDATE
+1. Extract ZIP and open akram-upload-ready.
+2. Upload files directly to repository root, beside index.html.
+3. If GitHub limits the upload count, upload the first half and Commit, then the remaining half and Commit. Do not upload the enclosing folder.
+4. Wait for final Pages deployment and refresh Ctrl+Shift+R.
+5. Open check-files.html to check missing files.
 
-1. Extract this ZIP. Open akram-upload-ready.
-2. Select ALL files inside it (not the enclosing folder).
-3. GitHub repository: Add file > Upload files. Drop ALL selected files.
-4. Commit changes. Existing matching files are replaced.
-5. Wait for Pages deployment, then refresh with Ctrl+Shift+R.
+Somali: Faylasha laba qaybood ku geli haddii GitHub tirada xaddido. Labada jeerba geli isla meesha index.html yaallo; folder-ka dibadda ha gelin.
 
-All assets now sit beside index.html. No assets subfolder is required.
-Do not delete the old folder first. The new pages use new asset filenames.
-
-Somali: Faylasha oo dhan isku mar geli. index.html iyo faylasha assets-- waa inay hal meel wada yaallaan.
-Google login/admin/payment processing are not provided by this static edition.
+The six new PDFs are included. Priced PDFs remain excluded; old public copies require separate removal. Authentication configuration, secure paid storage and checkout remain pending.

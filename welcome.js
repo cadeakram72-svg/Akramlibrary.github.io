@@ -1,0 +1,1 @@
+(()=>{const room=document.getElementById('welcome');if(!room)return;const button=room.querySelector('.welcome-mode');button.addEventListener('click',()=>{const dark=room.classList.toggle('welcome-night');button.setAttribute('aria-pressed',String(dark))});})();
