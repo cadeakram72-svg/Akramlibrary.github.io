@@ -21,6 +21,7 @@ function render(){
 login.addEventListener('click',e=>{if(user){e.preventDefault();render();dialog.showModal()}});
 document.querySelector('.platform-sidebar nav a[href="account.html"]')?.addEventListener('click',e=>{if(user){e.preventDefault();render();dialog.showModal()}});
 q('.member-logout').onclick=async()=>{const b=q('.member-logout');b.disabled=true;q('.member-error').textContent='';try{const {error}=await client.auth.signOut();if(error)throw error;user=null;render();dialog.close()}catch{q('.member-error').textContent=so()?'Ka bixiddu ma dhammaan. Mar kale isku day.':'Could not sign out. Please try again.'}finally{b.disabled=false}};
-new MutationObserver(render).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
+let lastLanguage=document.documentElement.lang;
+new MutationObserver(()=>{const nextLanguage=document.documentElement.lang;if(nextLanguage===lastLanguage)return;lastLanguage=nextLanguage;render()}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
 (async()=>{try{const {createClient}=await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.1/+esm');client=createClient(config.supabaseUrl,config.supabasePublishableKey,{auth:{flowType:'pkce',persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});client.auth.onAuthStateChange((event,session)=>{user=session?.user||null;render()});const {data,error}=await client.auth.getSession();if(error)throw error;user=data.session?.user||null;render()}catch{login.title='Account connection unavailable; open sign in to retry.'}})();
 })();
