@@ -5,7 +5,7 @@ if(!login||!signup||!config.supabaseUrl||!config.supabasePublishableKey)return;
 let client,user;
 const so=()=>document.documentElement.lang==='so';
 const dialog=document.createElement('dialog');dialog.className='member-dialog';
-dialog.innerHTML='<button class="member-close" aria-label="Close">×</button><div class="member-avatar" aria-hidden="true"></div><h2></h2><p class="member-name"></p><p class="member-email"></p><p class="member-note"></p><p><a href="purchases.html">My purchases / Buugaagtayda</a></p><p><a href="admin.html">Owner dashboard / Maamulka</a></p><button class="member-logout"></button><p class="member-error" role="status"></p>';
+dialog.innerHTML='<button class="member-close" aria-label="Close">×</button><div class="member-avatar" aria-hidden="true"></div><h2></h2><p class="member-name"></p><p class="member-email"></p><p class="member-note"></p><button class="member-logout"></button><p class="member-error" role="status"></p>';
 document.body.append(dialog);
 const q=s=>dialog.querySelector(s);
 q('.member-close').onclick=()=>dialog.close();
@@ -23,5 +23,5 @@ document.querySelector('.platform-sidebar nav a[href="account.html"]')?.addEvent
 q('.member-logout').onclick=async()=>{const b=q('.member-logout');b.disabled=true;q('.member-error').textContent='';try{const {error}=await client.auth.signOut();if(error)throw error;user=null;render();dialog.close()}catch{q('.member-error').textContent=so()?'Ka bixiddu ma dhammaan. Mar kale isku day.':'Could not sign out. Please try again.'}finally{b.disabled=false}};
 let lastLanguage=document.documentElement.lang;
 new MutationObserver(()=>{const nextLanguage=document.documentElement.lang;if(nextLanguage===lastLanguage)return;lastLanguage=nextLanguage;render()}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
-(async()=>{try{client=await window.Akram.client();client.auth.onAuthStateChange((event,session)=>{user=session?.user||null;render()});const {data,error}=await client.auth.getSession();if(error)throw error;user=data.session?.user||null;render()}catch{login.title='Account connection unavailable; open sign in to retry.'}})();
+(async()=>{try{const {createClient}=await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.1/+esm');client=createClient(config.supabaseUrl,config.supabasePublishableKey,{auth:{flowType:'pkce',persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});client.auth.onAuthStateChange((event,session)=>{user=session?.user||null;render()});const {data,error}=await client.auth.getSession();if(error)throw error;user=data.session?.user||null;render()}catch{login.title='Account connection unavailable; open sign in to retry.'}})();
 })();
