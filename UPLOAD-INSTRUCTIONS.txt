@@ -1,10 +1,3 @@
-AKRAM LIBRARY — UPDATE
-1. Extract ZIP and open akram-upload-ready.
-2. Upload files directly to repository root, beside index.html.
-3. If GitHub limits the upload count, upload the first half and Commit, then the remaining half and Commit. Do not upload the enclosing folder.
-4. Wait for final Pages deployment and refresh Ctrl+Shift+R.
-5. Open check-files.html to check missing files.
-
-Somali: Faylasha laba qaybood ku geli haddii GitHub tirada xaddido. Labada jeerba geli isla meesha index.html yaallo; folder-ka dibadda ha gelin.
-
-The six new PDFs are included. Priced PDFs remain excluded; old public copies require separate removal. Authentication configuration, secure paid storage and checkout remain pending.
+MARKA HORE: Supabase ku rakib 01_SETUP.sql, 02_CATALOG.sql, 03_OWNER.sql oo ku jira Akram_Admin_Install.zip.
+KADIB: Faylasha website-update geli isla meesha index.html yaallo. Ha gelin ZIP-ka. Ha gelin website-update folder-ka hoostiisa. Commit changes.
+Ha tirtirin assets-kii hore. Geli paid PDF-yada adigoo maraya admin.html. Akhri HAGE_MAAMUL.html.
