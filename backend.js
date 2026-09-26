@@ -6,7 +6,22 @@ const safeURL=s=>{if(!s)return null;try{const u=new URL(s,location.href);return 
 function book(r){const d=r.data;return {...d,id:r.id,title:String(d.title||''),cover:safeURL(d.cover)||'assets--books--dhis-naftaada.jpg',source:safeURL(d.source),price:Number(r.price),paid:Number(r.price)>0,published:r.published,archived:r.archived,privatePath:r.file_path,pdf:Number(r.price)>0?null:safeURL(d.pdf),text:Number(r.price)>0?null:safeURL(d.text),download:Number(r.price)>0?false:d.download!==false};}
 async function rows(){return check(await (await client()).from('akram_books').select('*').order('updated_at',{ascending:false}));}
 async function file(b){if(!b.privatePath)return b.pdf||b.text;const c=await client();const d=check(await c.storage.from('akram-books').createSignedUrl(b.privatePath,900));return d.signedUrl;}
-async function catalog(){if(!config.backendEnabled){const r=await fetch('./catalog.json');if(!r.ok)throw Error('Catalog unavailable');return r.json()}return Promise.all((await rows()).filter(r=>r.published&&!r.archived).map(async r=>{const b=book(r);if(!b.paid&&b.privatePath){b.pdf=await file(b);b.text=b.pdf}return b}));}
+// Public shelves do not depend on the authentication SDK loading or its session lock.
+async function publicRequest(path,options={}){
+ const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),15000);
+ try{const response=await fetch(config.supabaseUrl.replace(/\/$/,'')+path,{...options,headers:{apikey:config.supabasePublishableKey,'Content-Type':'application/json',...options.headers},signal:controller.signal});
+ if(!response.ok)throw Error('Library request failed ('+response.status+')');return await response.json();
+ }finally{clearTimeout(timer)}
+}
+async function catalog(){
+ if(!config.backendEnabled){const r=await fetch('./catalog.json');if(!r.ok)throw Error('Catalog unavailable');return r.json()}
+ const data=await publicRequest('/rest/v1/akram_books?select=*&published=eq.true&archived=eq.false&order=updated_at.desc');
+ return Promise.all(data.map(async r=>{const b=book(r);if(!b.paid&&b.privatePath){
+ try{const signed=await publicRequest('/storage/v1/object/sign/akram-books/'+b.privatePath.split('/').map(encodeURIComponent).join('/'),{method:'POST',body:JSON.stringify({expiresIn:900})});
+ const path=signed.signedURL||signed.signedUrl;if(!path)throw Error('Missing file URL');b.pdf=new URL(path.startsWith('/object/')?'/storage/v1'+path:path,config.supabaseUrl).href;b.text=b.pdf;
+ }catch{b.pdf='./read.html?book='+encodeURIComponent(b.id);b.text=b.pdf;b.download=false;b.fileUnavailable=true}
+ }return b}));
+}
 window.Akram={client,check,safeURL,book,rows,file,catalog,enabled:!!config.backendEnabled,
  async user(){return (await (await client()).auth.getSession()).data.session?.user||null},
  async admin(){return !!check(await (await client()).rpc('akram_is_admin'))},
