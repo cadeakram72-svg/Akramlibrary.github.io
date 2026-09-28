@@ -6,7 +6,7 @@ const icon=n=>`<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="c
 const methods=[{id:'evc',name:'EVC',title:'EVC Plus',code:'*712*618248533*5#',tel:'*712*618248533*5%23'},{id:'edahab',name:'EDAHAB',title:'eDahab',code:'*112*628248533*5#',tel:'*112*628248533*5%23'},{id:'sim',name:'SIM',title:'SIM',code:'+252 618 248 533',tel:'+252618248533'}];
 const brand=m=>m.id==='sim'?`<span class="pay-sim">SIM ${icon('sim')}</span>`:`<span role="img" aria-label="${m.title}" class="pay-brand pay-brand-${m.id}"></span>`;
 let catalog;
-window.showBookOffer=async id=>{try{
+window.showBookOffer=async id=>{location.href='checkout.html?book='+encodeURIComponent(id);return;try{
 catalog=await window.Akram.catalog();
 const b=catalog.find(x=>x.id===id&&x.paid);if(!b)throw Error('Book unavailable');
 if(window.Akram.enabled&&await window.Akram.access(b.id)){location.href='read.html?book='+encodeURIComponent(b.id)+'&start=1';return;}
