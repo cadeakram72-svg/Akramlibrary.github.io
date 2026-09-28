@@ -1,0 +1,1 @@
+Extract All. Fur GITHUB_UPLOAD. Saddexda fayl ku upload garee GitHub halka index.html yaallo, kadib Commit changes. Ha tirtirin faylasha kale. auth-config.js waa kii hore. Naqshaddan waxay beddeshaa Login/Signup keliya. Google/Supabase configuration lama beddelin.
