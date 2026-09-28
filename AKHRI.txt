@@ -1,2 +1,5 @@
-Background-ka Login/Signup oo keliya.
-Extract All > GITHUB_UPLOAD. Labada fayl geli GitHub halka index.html yaallo > Commit changes. Ha tirtirin faylasha kale. Waxay ku tiirsan tahay Login/Signup update-kii hore.
+Labada fayl ee GITHUB_UPLOAD geli GitHub halka index.html yaallo. Commit changes.
+Kadib Forgot password > geli email > fur link-ga email-ka ugu dambeeyey isla browser-ka > geli fure cusub laba jeer > Save Password.
+Supabase Authentication > URL Configuration > Redirect URLs: ku dar https://cadeakram72-svg.github.io/Akramlibrary.github.io/account.html?mode=recovery haddii aanu jirin.
+Haddii Google aad markii hore ku gashay, Continue with Google isticmaal.
+Tijaabooyinka koodhka waxaa lagu sameeyey adeeg la matalay; akoonkaaga iyo email delivery lama tijaabin.
