@@ -1,0 +1,11 @@
+AKRAM LIBRARY — Cusboonaysiinta naqshadda
+
+1. ZIP-ka Extract All ku fur.
+2. Fur GITHUB_UPLOAD.
+3. GitHub repository-ga, Add file > Upload files: geli 10-ka fayl ee ku jira folder-ka.
+4. Ku geli halka index.html hore yaallo. Ha gelin folder-ka GITHUB_UPLOAD laftiisa.
+5. Commit changes. Faylasha isku magaca ah waa la cusboonaysiinayaa.
+6. Ha tirtirin faylasha kale, buugaagta, auth-config.js ama backend.js.
+7. Marka GitHub Pages deployment-ku dhammaado, ku fur website-ka Ctrl+Shift+R.
+
+Tani waa update keliya; waxay ku tiirsan tahay faylasha website-ka ee hore. Waxaa ku jira Welcome, Room03, collection-ka iyo akhristaha cusub. Kuma jiraan PDF-yo ama isbeddel Supabase/SQL.
