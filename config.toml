@@ -1,0 +1,5 @@
+project_id = "akram-library"
+
+[functions.akram-commerce]
+verify_jwt = false
+# Function validates user JWTs itself; webhook and cron have separate signature authentication.

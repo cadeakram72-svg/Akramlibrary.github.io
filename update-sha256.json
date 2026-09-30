@@ -1,0 +1,94 @@
+{
+  "SUPABASE_CLIENT_LICENSES.txt": {
+    "before": null,
+    "after": "8676e933f6f470921bee345140d70d152827ffd1d54475737584e2c7da068b16"
+  },
+  "account.html": {
+    "before": "215dbe6ac8e55cf524b900817f883376328bc638c32b2e8fcc9034ee654ee4cc",
+    "after": "78eaeecddc7ee2cd609f0a8738671715c4c3c1091bd43a604a7006132c7acf02"
+  },
+  "account.js": {
+    "before": "0aa1bd5f1390e6d06fcf7500dac5d38ce9ddae710b013cb0f17ddb6cee2dec66",
+    "after": "09e711ccf6e41880fa96a6ed391a7b4ff37eb726577f430ab5237adcab328cf6"
+  },
+  "admin-production.js": {
+    "before": null,
+    "after": "7f269de1887a747450413e6792a5afc267af3d578ed3e66c45be25d0d2b092c4"
+  },
+  "admin.html": {
+    "before": "743e0e2a96f4892ecb26a0893228b0224cb1a20a14b4c885506ee319eac202b9",
+    "after": "cd8b5e7168a5495362d98f29d7c5bdaa22ab568ae642d8bac007c32984609b19"
+  },
+  "admin.js": {
+    "before": "cc73546d8593ccff7adb26624fe1df32f918e455e7af91150754cc241d40d5ab",
+    "after": "bb7ae103d053b09ec7c4ba499cd7c24d3cc51cd79c435e1cad26db01da4636ca"
+  },
+  "backend.js": {
+    "before": "ce44b82c7bbcb70aaaba4f0bab35f77d65cf17964b3dd0a59d345364aeba0b0f",
+    "after": "41d459df196771b859841ca11327bb2d4a887fd9300c310e389c8a37a00ee529"
+  },
+  "checkout.css": {
+    "before": "cce85fa570ed15b323f5b4bce34b3a20e41d86e6851d6a0ff0cf58df18666706",
+    "after": "8de0148bdc7c817e1379f89e679385c1cdbc3274ed5b951f71aa3047d96f8a9a"
+  },
+  "checkout.html": {
+    "before": "88737400babe7416591f350581f7f8169073f5500caaafd91ec4c147436223dc",
+    "after": "132f1a12fff2ab11968f165e1388a47bd9c3f3e895a70d987a4990645f51d2a8"
+  },
+  "checkout.js": {
+    "before": "8f778fbd75288f4d83af00b60da29fb2cabdcce6f45c31bae62a50fd4fb4b80d",
+    "after": "d745b1a207fd40c1be036e492fdd631493ba6a4806229d66ddf0c88204d9af15"
+  },
+  "index.html": {
+    "before": "44d674090b3368bbe1d4ba3775c4a8bcffb0cb4490166ba50b306e2ea98ab225",
+    "after": "ad488f1208a000ec32e954a9e6e4556fdb5c0e21cf9af9113ac04ca49ae1b6d8"
+  },
+  "member-nav.js": {
+    "before": "ff0e1a19c36d601edd25c2c36ebd571e1cbf4eec469ae01bc9fcafd0a49e0689",
+    "after": "7406e6cd5861cab5d9692e2e314e93d00ac15b4d48e328bdd31837e4604dfe5c"
+  },
+  "privacy.html": {
+    "before": null,
+    "after": "da7d4d0d38ee7608c02b51db3e7dcbd13990195b3093eacab7f162e42624f3e3"
+  },
+  "purchases.html": {
+    "before": "b4d9c7a42f94ae73534c80f43b28839d533d2687a0e09ecd7e1edc20bde2e42d",
+    "after": "71d3513ec912fbb94b9db339f4bd66be7acb4da7df8c4e811109fd6562dd3106"
+  },
+  "purchases.js": {
+    "before": "349d961585f189db229e1dc7d42ba2ddb079dad870078bb2c2e3da4058feccbc",
+    "after": "c5cd0580077cf10a15bbee9e9d3357b164cd3416b04157ae5f4588f8219bb4e1"
+  },
+  "read.html": {
+    "before": "274f7490723337305172082329a3351fd21cc4fddda154f1d1f5de7bbaa1363a",
+    "after": "d2674ad9d345c78c9337aae9fbafa4be0c1710e292c0bce1f6428087c0685d51"
+  },
+  "read.js": {
+    "before": "6c1af35a81609cd41598e81c0db85d828cdd72649761c6ea62ecb4210d8d8199",
+    "after": "30cabf007ca1bc9e0f9c3c2fc914a282621a7c11fcb10da1144476a230643d80"
+  },
+  "reading-sync.js": {
+    "before": null,
+    "after": "e4f9bd4e09b41ed0149c2868d5ebd611403728ff6162b7524d6e5b1f6d93bec9"
+  },
+  "refund.html": {
+    "before": null,
+    "after": "fcfba2054d169846cf4c2faf04d8c777eff50b80361235fa905a8a46dcd4611f"
+  },
+  "refund.js": {
+    "before": null,
+    "after": "20bada230284a07ff9c7f4cce7d715231f3f874015e430e4f75bc35160e6cb86"
+  },
+  "storefront.js": {
+    "before": "cc7bf0616d9a6b7cccd447596ae4fc10e6ea3f3ca10fb1c293365ef6a3460370",
+    "after": "8621006b140eca8032c9c5af9ecef44dfef40ca77c64faf52e0523878f72592d"
+  },
+  "supabase-client.js": {
+    "before": null,
+    "after": "f64e234f0cb4fcaa6b96b8dc71e833c81304c04fc2fdd9d8a3782e1bc6b27c6e"
+  },
+  "terms.html": {
+    "before": null,
+    "after": "17b41ab49d464a6b4ca71183e0da24ddaae082a017f8704b59a183fddff5f08c"
+  }
+}

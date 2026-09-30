@@ -1,0 +1,32 @@
+{
+  "changed": [
+    "SUPABASE_CLIENT_LICENSES.txt",
+    "account.html",
+    "account.js",
+    "admin-production.js",
+    "admin.html",
+    "admin.js",
+    "backend.js",
+    "checkout.css",
+    "checkout.html",
+    "checkout.js",
+    "index.html",
+    "member-nav.js",
+    "privacy.html",
+    "purchases.html",
+    "purchases.js",
+    "read.html",
+    "read.js",
+    "reading-sync.js",
+    "refund.html",
+    "refund.js",
+    "storefront.js",
+    "supabase-client.js",
+    "terms.html"
+  ],
+  "removed_from_public_directory": [
+    "assets--books--dhis-naftaada.pdf",
+    "assets--books--ganacsade.pdf"
+  ],
+  "catalog_sha256_unchanged": true
+}

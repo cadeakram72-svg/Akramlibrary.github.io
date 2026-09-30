@@ -1,0 +1,20 @@
+{
+  "name": "akram-library-production-services",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@supabase/supabase-js": "2.50.0"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.8",
+    "deno": "2.9.6",
+    "esbuild": "0.25.9",
+    "playwright": "1.62.1"
+  },
+  "scripts": {
+    "test:db": "node tests/database.cjs",
+    "test:security": "node tests/security.mjs",
+    "test:sync": "node tests/reading-sync.cjs",
+    "test:server": "deno test --node-modules-dir=manual --allow-env tests/server.test.ts"
+  }
+}
