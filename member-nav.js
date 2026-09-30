@@ -16,8 +16,9 @@ function render(){
  login.dataset.en=user?'My Profile':'Log in';login.dataset.so=user?'Akoonkayga':'Soo gal';
  login.href=user?'#my-profile':'account.html?view=signin';
  const create=document.querySelector('.side-note a');if(create)create.hidden=!!user;
- if(user){q('h2').textContent=so()?'Akoonkayga':'My Profile';q('.member-name').textContent=user.user_metadata?.full_name||user.user_metadata?.name||'';q('.member-email').textContent=user.email||'';q('.member-avatar').textContent=(user.user_metadata?.full_name||user.email||'A').slice(0,1).toUpperCase();q('.member-note').textContent=so()?'Akhriska iyo favorites-ka hadda qalabkan ayay ku kaydsan yihiin.':'Reading progress and favorites are currently saved on this device.';q('.member-logout').textContent=so()?'Ka bax':'Sign out';}
+ if(user){q('h2').textContent=so()?'Akoonkayga':'My Profile';q('.member-name').textContent=user.user_metadata?.full_name||user.user_metadata?.name||'';q('.member-email').textContent=user.email||'';q('.member-avatar').textContent=(user.user_metadata?.full_name||user.email||'A').slice(0,1).toUpperCase();q('.member-note').textContent=so()?'Akhrisku akoonka ayuu ku kaydsamaa marka xiriirku shaqeeyo; favorites-ku qalabkan ayay ku kaydsan yihiin.':'Reading position syncs with your account when connected; favorites remain on this device.';q('.member-logout').textContent=so()?'Ka bax':'Sign out';}
 }
+document.addEventListener('akram-open-profile',()=>{if(user){render();dialog.showModal()}});
 login.addEventListener('click',e=>{if(user){e.preventDefault();render();dialog.showModal()}});
 document.querySelector('.platform-sidebar nav a[href="account.html"]')?.addEventListener('click',e=>{if(user){e.preventDefault();render();dialog.showModal()}});
 q('.member-logout').onclick=async()=>{const b=q('.member-logout');b.disabled=true;q('.member-error').textContent='';try{const {error}=await client.auth.signOut();if(error)throw error;user=null;render();dialog.close()}catch{q('.member-error').textContent=so()?'Ka bixiddu ma dhammaan. Mar kale isku day.':'Could not sign out. Please try again.'}finally{b.disabled=false}};
