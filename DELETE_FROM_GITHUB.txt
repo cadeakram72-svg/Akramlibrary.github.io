@@ -1,0 +1,15 @@
+Do not delete a book record or the only copy of a book.
+First upload/verify private copies in Supabase Storage using the existing admin book editor.
+Then remove these PUBLIC files from the GitHub Pages repository:
+assets--books--dhis-naftaada.pdf
+assets--books--ganacsade.pdf
+
+Both returned HTTP 200/application/pdf on 29 September 2026. They bypass the paywall.
+Removing files from a new upload does NOT delete existing GitHub files.
+Removing them from the current branch also does NOT remove older public Git history,
+old deployment artifacts, caches or existing downloaded copies. Review/purge those
+with GitHub's documented process before calling paid access protected.
+
+The existing local copies were preserved separately, unchanged. They are deliberately
+not in this public update or its ZIP. Ganacsade currently has no private file_path;
+upload that PDF through Admin -> Edit -> Book PDF before accepting payments for it.
