@@ -1,0 +1,9 @@
+import type {Book,Lang} from './types';
+export const tr=(lang:Lang,en:string,so:string)=>lang==='so'?so:en;
+export const money=(b:Book,lang:Lang='en')=>b.paid?'$'+Number(b.price).toFixed(2):tr(lang,'Free','Bilaash');
+export function stored<T>(key:string,fallback:T):T {try {return JSON.parse(localStorage.getItem('akram-'+key)||'null')??fallback}catch{return fallback}}
+export function save(key:string,value:unknown):boolean {try{localStorage.setItem('akram-'+key,JSON.stringify(value));return true}catch{return false}}
+export const featuredIds=['dhis-naftaada','ganacsade','hoggaami-naftaada','xuska-mawliidka','maxaynu-u-dhibaataysannahay','ku-baro-carabida'];
+export function featured(books:Book[],ids=featuredIds){return [...books].sort((a,b)=>Number(b.paid)-Number(a.paid)||(b.price||0)-(a.price||0)||(ids.indexOf(a.id)<0?999:ids.indexOf(a.id))-(ids.indexOf(b.id)<0?999:ids.indexOf(b.id)))}
+export function matchesCategory(b:Book,c:string){if(!c)return true;if(c==='Somali Books')return b.language==='Somali';if(c==='English Books')return b.language==='English';if(c==='Classics')return b.language==='English'&&!b.paid;if(c==='Romance')return ['1342','2388','kulaal-iyo-kalgacal'].includes(b.id);if(c==='Children')return !!b.short||b.category.includes('Children');if(c==='Non-Fiction')return !['Fiction','Literature'].includes(b.category)&&!b.short;return b.category===c}
+export function paginate(text:string){const paras=text.replace(/\r/g,'').split(/\n\s*\n/);const pages:string[]=[];let page='',count=0;for(const para of paras){const words=para.trim().split(/\s+/);if(words.length>420){if(page){pages.push(page);page='';count=0}for(let i=0;i<words.length;i+=300)pages.push(words.slice(i,i+300).join(' '));continue}if(count+words.length>330&&page){pages.push(page);page='';count=0}page+=(page?'\n\n':'')+para.trim().replace(/([^\n])\n([^\n])/g,'$1 $2');count+=words.length}if(page.trim())pages.push(page);return pages}
