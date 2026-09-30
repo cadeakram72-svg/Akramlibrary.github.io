@@ -1,0 +1,1 @@
+2026-09-28: Integrated hardcover two-page desktop / single-page mobile text and PDF readers. Restored Room 03. All Somali + 10 English on home; full catalog searchable. 21 reader/collection checks and 9 actual PDF checks passed. Authentication mocked in UI tests; no live payment or auth claims. Existing hero preserved.

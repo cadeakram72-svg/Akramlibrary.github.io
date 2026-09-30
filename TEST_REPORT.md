@@ -1,20 +1,15 @@
-# Akram Library — validation report
-Date: 2026-09-21
+# Validation — 27 September 2026
 
-## Passed locally
-- 17 database authorization/workflow checks against PGlite (PostgreSQL-compatible), with simulated Supabase auth and storage schemas: public catalog, paid-file denial, unauthenticated order denial, role-escalation denial, self-entitlement denial, price-edit denial, order submission, idempotent submission, self-approval denial, direct status-update denial, cross-user order privacy, owner approval, idempotent approval, hiding books, purchased access after hiding, and denial to another buyer.
-- 36 Chromium browser assertions across 390x844 and 1440x1000 viewports: search, language filter, eDahab tel URI, exclusive accordion, pending-order UI, logout UI, real PDF next/previous rendering, free PDF download visibility and file response, admin catalog list, edit price, hide, add with file inputs, archive, restore, approval UI, horizontal overflow, and uncaught JavaScript errors.
-- Syntax checks on 10 application scripts.
-- 80 local catalog asset references present.
+## Passed
 
-## Scope and limits
-Browser authentication, database and payment calls used an in-memory fixture, not live Supabase sessions. PDFs were real local files. SQL tests used simulated auth/storage schemas. No real payment was sent; no live Google/email login was completed. Tel links were inspected, not dialled. Browser viewports approximate phones; they do not verify a physical Android/iPhone dialer.
+- TypeScript strict check and production esbuild/Tailwind build.
+- Byte-for-byte comparison: preserved body markup for the original header, hero and Welcome matches the pre-update version.
+- 33 local browser assertions across 1440×1000 and 390×1000: catalog card counts, English/Somali shelves, no horizontal overflow, search results and empty state, language filter, wishlist count, add/remove bag items, book detail, actual local text pagination next/previous, Somali language switch, and mocked newsletter success. No uncaught page errors.
+- 13 PGlite SQL checks: additive migration can run twice; anonymous subscription; normalized unique email; private subscriber-table access; invalid email rejection; unauthenticated review denial; authenticated review; no unowned paid-book review; hidden-title denial; rating validation; existing review update; public identity column inaccessible; duplicate subscriptions do not duplicate rows.
+- Desktop and mobile screenshots inspected after the production build. Long titles clamped, reader modal and bag are responsive.
 
-## Fixed during validation
-Payment dialog close button could be covered by the content after scrolling; changed to a sticky 44px control. Updated curated book displays and prices to follow the managed catalog. Configured private bucket access and prevented anonymous catalog policy permission errors. Existing buyers retain access to hidden/archived purchases. SIM/EVC approvals share the same transaction reference uniqueness namespace.
+## Boundaries
 
-## Required acceptance after deployment
-Run SQL setup + seed + verified owner assignment, deploy files, upload paid PDFs, verify real login/logout and password reset, use two distinct accounts to test pending -> owner verified -> readable purchase, verify rejected orders cannot read, check the real dialer and provider recipient, test free downloads on real phone and PC. Verify paid PDFs are no longer publicly hosted; old Git history is a separate cleanup.
+Authentication, review/subscription persistence and payment flows in production depend on the existing Supabase setup and the new optional migration. Browser tests used a local catalog fixture, a mocked signed-out auth client and mocked review/subscription HTTP responses. They do not prove live Google login or real payment settlement. SQL tests simulate the relevant auth schema/roles locally. The new migration has not been run on the live project by the assistant.
 
-## Not implemented
-Automatic EVC/eDahab settlement verification, card checkout, provider refunds, automatic notifications, cross-device reading progress/favorites, automatic backup restoration, native mobile app. These are not represented as active features.
+The generated images are decorative original assets. Existing catalog covers and book files are reused. No changes were made to payment amounts in the database or to the original header/hero/Welcome content. No remote files were deployed.

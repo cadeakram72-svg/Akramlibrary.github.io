@@ -1,0 +1,17 @@
+const {PGlite}=require(process.env.PGLITE_MODULE||'@electric-sql/pglite');const fs=require('fs'),assert=require('assert');
+(async()=>{const db=new PGlite();await db.exec(`create role anon;create role authenticated;create schema auth;create table auth.users(id uuid primary key,raw_user_meta_data jsonb);create function auth.uid() returns uuid language sql stable as $$ select nullif(current_setting('request.user_id',true),'')::uuid $$;grant usage on schema auth to anon,authenticated;grant execute on function auth.uid() to anon,authenticated;
+create table public.akram_books(id text primary key,price numeric,published boolean,archived boolean);
+create table public.akram_entitlements(user_id uuid,book_id text);
+create function public.akram_is_admin() returns boolean language sql stable as $$select auth.uid()='00000000-0000-0000-0000-000000000001'::uuid$$;
+grant select on public.akram_books to anon,authenticated;
+insert into auth.users values('00000000-0000-0000-0000-000000000002','{"full_name":"Test Reader"}');
+insert into public.akram_books values('free',0,true,false),('paid',5,true,false),('hidden',0,false,false);`);
+const sql=fs.readFileSync('akram-storefront-src/setup/04_REVIEWS_NEWSLETTER.sql','utf8');await db.exec(sql);await db.exec(sql);let n=1;
+const success=async(q)=>{await db.exec(q);n++};const denied=async(q)=>{let failed=false;try{await db.exec(q)}catch{failed=true}assert(failed,q);n++};
+await success("set role anon;select public.akram_subscribe('reader@example.com');select public.akram_subscribe('READER@example.com');");
+await denied('select * from public.akram_newsletter');await denied("select public.akram_subscribe('not-an-email')");await denied("select public.akram_write_review('free',5,'A thoughtful and useful book.')");
+await success("reset role;set request.user_id='00000000-0000-0000-0000-000000000002';set role authenticated;select public.akram_write_review('free',5,'A thoughtful and useful book.');");
+await denied("select public.akram_write_review('paid',5,'A thoughtful and useful book.')");await denied("select public.akram_write_review('hidden',5,'A thoughtful and useful book.')");await denied("select public.akram_write_review('free',6,'A thoughtful and useful book.')");
+await success("select public.akram_write_review('free',4,'An updated review of this book.');");const review=await db.query('select book_id,rating,body,display_name,created_at from public.akram_reviews');assert.equal(review.rows.length,1);assert.equal(review.rows[0].rating,4);assert.equal(review.rows[0].display_name,'Test');n++;
+await denied('select user_id from public.akram_reviews');
+await db.exec('reset role');const count=await db.query('select count(*)::int as n from public.akram_newsletter');assert.equal(count.rows[0].n,1);n++;console.log('PASS '+n+' SQL checks including idempotency, grants, validation, and paid-review entitlement gate.');await db.close();})().catch(e=>{console.error(e);process.exit(1)});
